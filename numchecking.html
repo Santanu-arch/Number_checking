@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Number</title>
+</head>
+<body>
+  <p><label>Enter a number : </label><input type="text" id="num"></p>
+  <button onclick="fun1()">Palindrome</button>
+  <button onclick="fun2()">Armstrong</button>
+  <button onclick="fun3()">Tech</button>
+  <button onclick="fun4()">Harshad</button>
+  <button onclick="fun5()">Neon</button>
+  <p><input type="checkbox" id="a1">YES</p>
+  <p><input type="checkbox" id="a2">NO</p>
+  <script>
+    function fun1(){
+      let num=Number(document.getElementById("num").value)
+      let a1=document.getElementById("a1")
+      let a2=document.getElementById("a2")
+      let b,c=0
+      let d=num
+      while(num>0){
+        b=num%10
+        c=10*c+b
+        num=parseInt(num/10)
+      }
+      if(c==d){
+        a1.checked=true
+        a2.checked=false
+      }else{
+        a1.checked=false
+        a2.checked=true
+      }
+    }
+  
+  function fun2(){
+      let num=Number(document.getElementById("num").value)
+      let a1=document.getElementById("a1")
+      let a2=document.getElementById("a2")
+      let b,c=0
+      let d=num
+      while(num>0){
+        b=num%10
+        c=c+b*b*b
+        num=parseInt(num/10)
+      }
+      if(c==d){
+        a1.checked=true
+        a2.checked=false
+      }else{
+        a1.checked=false
+        a2.checked=true
+      }
+    }
+  
+   function fun3(){
+      let num=Number(document.getElementById("num").value)
+      let a1=document.getElementById("a1")
+      let a2=document.getElementById("a2")
+      let b,c=0
+      let d=num
+      while(num>0){
+        b=num%100
+        c=c+b
+        num=parseInt(num/100)
+      }
+      if(c*c==d){
+        a1.checked=true
+        a2.checked=false
+      }else{
+        a1.checked=false
+        a2.checked=true
+      }
+    }
+  function fun4(){
+      let num=Number(document.getElementById("num").value)
+      let a1=document.getElementById("a1")
+      let a2=document.getElementById("a2")
+      let b,c=0
+      let d=num
+      while(num>0){
+        b=num%10
+        c=c+b
+        num=parseInt(num/10)
+      }
+      if(d%c==0){
+        a1.checked=true
+        a2.checked=false
+      }else{
+        a1.checked=false
+        a2.checked=true
+      }
+    }
+  function fun5(){
+      let num=Number(document.getElementById("num").value)
+      let a1=document.getElementById("a1")
+      let a2=document.getElementById("a2")
+      let b,c=0
+      let d=num
+      let e=num*num
+      while(e>0){
+        b=e%10
+        c=c+b
+        e=parseInt(e/10)
+      }
+      if(c==d){
+        a1.checked=true
+        a2.checked=false
+      }else{
+        a1.checked=false
+        a2.checked=true
+      }
+    }
+  </script>
+</body>
+</html>
+
